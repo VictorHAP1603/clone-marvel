@@ -1,0 +1,150 @@
+.banner {
+  min-height: 400px;
+
+  width: 100%;
+
+  .wrapper {
+    overflow: hidden;
+
+    .list {
+      display: flex;
+      transition: all 0.4s;
+    }
+
+    .item {
+      opacity: 0.6;
+      position: relative;
+      flex-shrink: 0;
+      height: 100%;
+      width: 100vw;
+      background: url(../img/movies/filmeViuvaNegra.png) no-repeat;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.4s;
+
+      img.filme-foto {
+        width: 100%;
+        max-width: 100%;
+        min-height: 600px;
+        object-fit: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+      }
+
+      .container {
+        position: absolute;
+        width: 100%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+
+        .content {
+          position: absolute;
+          padding: 0 10px;
+          color: var(--text-color-white);
+          width: 50%;
+
+          margin: 0 auto;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .logos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25rem;
+
+            img:nth-child(1) {
+              object-fit: cover;
+              align-self: flex-start;
+            }
+
+            .falcao {
+              width: 60%;
+            }
+          }
+
+          p {
+            margin: 10px 0;
+          }
+
+          .p-title {
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .item.active {
+      opacity: 1;
+    }
+  }
+
+  .control-banner {
+    .controls-item {
+      p {
+        color: var(--text-color-black);
+        padding: 20px 20px 50px 20px;
+        width: 17%;
+        font-size: 0.9rem;
+        font-weight: bold;
+        position: relative;
+        transition: all 0.4s;
+        cursor: pointer;
+
+        &::after {
+          position: absolute;
+          top: 0;
+          content: "";
+          display: block;
+          height: 4px;
+          width: 0%;
+          background-color: var(--red);
+        }
+      }
+
+      p.active {
+        color: var(--red);
+        &::after {
+          animation: animateRowBanner 5s linear forwards;
+        }
+      }
+
+      p:hover {
+        color: var(--red);
+      }
+
+      @keyframes animateRowBanner {
+        to {
+          width: 80%;
+        }
+      }
+    }
+
+    .social-medias {
+      flex: 1;
+      display: flex;
+      justify-content: space-evenly;
+      width: 100px;
+      align-self: flex-end;
+      justify-self: flex-start;
+      padding: 20px;
+
+      i {
+        transform: scale(1.5);
+        cursor: pointer;
+        color: gray;
+        transition: all 0.4s;
+
+        &:hover {
+          color: var(--text-color-black);
+        }
+      }
+    }
+  }
+}

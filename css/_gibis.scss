@@ -1,0 +1,72 @@
+.gibis {
+  .clip {
+    height: 580px;
+
+    & > img {
+      height: 540px;
+    }
+  }
+  .info {
+    .p-title {
+      font-weight: bold;
+      font-size: 2rem;
+      margin: 10px 0 0 0;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
+  .box-section.pad {
+    height: auto !important;
+    padding: 30px 30px 3rem 30px !important;
+    &::-webkit-scrollbar {
+      background-color: #0004;
+      height: 5px;
+      cursor: pointer;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--red);
+      cursor: pointer !important;
+    }
+  }
+
+  .item-box {
+    width: 200px !important;
+    height: 320px !important;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      img {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.6);
+      }
+
+      .title {
+        color: var(--red) !important;
+      }
+    }
+
+    img {
+      transition: all 0.4s;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .title {
+      color: var(--text-color-black) !important;
+      font-weight: bold !important;
+      transition: all 0.4s;
+    }
+
+    .subtitle {
+      color: var(--subtitle-color) !important;
+      font-size: 0.9rem !important;
+    }
+  }
+
+  .item-box + .item-box {
+    margin-left: 20px;
+  }
+}
