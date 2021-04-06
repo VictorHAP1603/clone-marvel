@@ -1,5 +1,5 @@
 .banner {
-  min-height: 400px;
+  // height: auto;
 
   width: 100%;
 
@@ -17,7 +17,6 @@
       flex-shrink: 0;
       height: 100%;
       width: 100vw;
-      background: url(../img/movies/filmeViuvaNegra.png) no-repeat;
 
       display: flex;
       flex-direction: column;
@@ -25,16 +24,15 @@
       transition: all 0.4s;
 
       img.filme-foto {
-        width: 100%;
         max-width: 100%;
         min-height: 600px;
-        object-fit: cover;
+        // object-fit: cover;
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
       }
 
       .container {
         position: absolute;
-        width: 100%;
+        width: 90%;
         height: 600px;
         display: flex;
         align-items: center;
@@ -76,6 +74,10 @@
             text-transform: uppercase;
             font-weight: bold;
           }
+
+          .p-subtitle {
+            line-height: 1.3rem;
+          }
         }
       }
     }
@@ -86,10 +88,13 @@
   }
 
   .control-banner {
+    display: flex !important;
+    flex-direction: column !important;
+
     .controls-item {
       p {
         color: var(--text-color-black);
-        padding: 20px 20px 50px 20px;
+        padding: 20px 20px 10px 20px;
         width: 17%;
         font-size: 0.9rem;
         font-weight: bold;
@@ -127,13 +132,22 @@
     }
 
     .social-medias {
-      flex: 1;
       display: flex;
       justify-content: space-evenly;
-      width: 100px;
+      width: 200px;
       align-self: flex-end;
       justify-self: flex-start;
-      padding: 20px;
+      padding: 20px 20px 5px 20px;
+
+      p {
+        display: none;
+      }
+
+      div {
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+      }
 
       i {
         transform: scale(1.5);
@@ -143,6 +157,224 @@
 
         &:hover {
           color: var(--text-color-black);
+        }
+      }
+    }
+  }
+}
+
+.controls-added {
+  width: 94%;
+  height: 15px;
+  position: absolute;
+  top: 470px;
+  display: none;
+  justify-content: center;
+
+  span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color-white);
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: var(--red);
+    }
+
+    &.active {
+      &::before {
+        animation: animateControlAdded 5s linear forwards;
+      }
+    }
+
+    & + span {
+      margin-left: 6px;
+    }
+
+    @keyframes animateControlAdded {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 852px) {
+  .banner {
+    .wrapper {
+      .list {
+        display: flex;
+        transition: all 0.4s;
+      }
+
+      .item {
+        position: initial;
+
+        img.filme-foto {
+          min-height: 400px;
+          max-width: 100%;
+
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .container {
+          position: initial;
+          background-color: var(--text-color-black);
+          height: 400px;
+          padding: 30px 30px 150px 30px;
+          width: 100%;
+
+          display: flex;
+          justify-content: flex-start;
+
+          .content {
+            position: initial;
+            padding: 90px 10px 0px 10px;
+            color: var(--text-color-white);
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .control-banner {
+      display: flex !important;
+      flex-direction: column !important;
+
+      .controls-item {
+        display: none;
+      }
+
+      .social-medias {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        border-bottom: 1px solid rgba($color: #999999, $alpha: 0.4);
+        margin-bottom: 70px;
+
+        p {
+          display: block;
+          text-transform: uppercase;
+          font-size: 1.1rem;
+          letter-spacing: 4px;
+          font-weight: bold;
+          color: var(--subtitle-color);
+        }
+      }
+    }
+  }
+
+  .controls-added {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    .wrapper {
+      .list {
+        display: flex;
+        transition: all 0.4s;
+      }
+
+      .item {
+        position: initial;
+
+        img.filme-foto {
+          min-height: 400px;
+          max-width: 100%;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .container {
+          position: initial;
+          background-color: var(--text-color-black);
+          height: 400px;
+          padding: 30px 30px 150px 30px;
+          width: 100%;
+
+          display: flex;
+          justify-content: flex-start;
+
+          .content {
+            position: initial;
+            padding: 90px 10px 0px 10px;
+            color: var(--text-color-white);
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .banner {
+    .wrapper {
+      .list {
+        display: flex;
+        transition: all 0.4s;
+      }
+
+      .item {
+        position: initial;
+
+        img.filme-foto {
+          min-height: 400px;
+          max-width: 100%;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .container {
+          position: initial;
+          background-color: var(--text-color-black);
+          height: 450px;
+          padding: 30px 30px 150px 30px;
+          width: 100%;
+
+          display: flex;
+          justify-content: flex-start;
+
+          .content {
+            position: initial;
+            padding: 90px 10px 0px 10px;
+            color: var(--text-color-white);
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .logos {
+              width: 20rem;
+            }
+
+            .p-title {
+              font-size: 1.5rem;
+            }
+
+            .p-subtitle {
+              font-size: 1rem;
+            }
+          }
         }
       }
     }
