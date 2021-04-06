@@ -21,6 +21,7 @@
   .box-section.pad {
     height: auto !important;
     padding: 30px 30px 3rem 30px !important;
+    overflow: auto;
     &::-webkit-scrollbar {
       background-color: #0004;
       height: 5px;
@@ -68,5 +69,13 @@
 
   .item-box + .item-box {
     margin-left: 20px;
+  }
+}
+
+@media (max-width: 852px) {
+  .gibis {
+    .clip {
+      height: auto;
+    }
   }
 }

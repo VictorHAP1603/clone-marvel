@@ -2,3 +2,35 @@
   min-height: 600px;
   width: 100%;
 }
+
+@media (max-width: 852px) {
+  .falcon-winterSoldier {
+    .box-section {
+      overflow: auto;
+      padding-bottom: 30px;
+      margin-bottom: 20px;
+
+      &::-webkit-scrollbar {
+        background-color: #0004;
+        height: 3px;
+        cursor: pointer;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--red);
+        cursor: pointer !important;
+      }
+
+      .box-itens-section {
+        .item-box {
+          width: 200px;
+          flex-shrink: 0;
+          padding-bottom: 50px;
+
+          & + .item-box {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

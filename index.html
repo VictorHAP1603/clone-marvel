@@ -19,7 +19,7 @@
     />
   </head>
   <body>
-    <header>
+    <header class="desktop">
       <div class="header">
         <div class="container">
           <div class="header-1">
@@ -60,6 +60,21 @@
         </div>
       </div>
     </header>
+
+    <header class="header-mobile">
+      <div class="hamburguer">
+        <span data-hamb="1"></span>
+        <span data-hamb="2"></span>
+        <span data-hamb="3"></span>
+      </div>
+
+      <img class="logo" src="./img/logo.png" alt="Logo" />
+
+      <div class="search">
+        <i class="fas fa-search"></i>
+      </div>
+    </header>
+
     <main>
       <section class="banner">
         <div class="wrapper">
@@ -219,9 +234,12 @@
             <p data-dropdown="control">Marvel Must Haves</p>
           </div>
           <div class="social-medias">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-instagram"></i>
+            <p>follow</p>
+            <div>
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-twitter-square"></i>
+              <i class="fab fa-instagram"></i>
+            </div>
           </div>
         </div>
       </section>
@@ -314,6 +332,109 @@
             <!-- Adicionando dinamicamente -->
           </div>
         </div>
+      </section>
+
+      <section class="news container">
+        <main class="latest">
+          <h1 class="yellowAfterAndBefore">the latest</h1>
+          <div class="latest-itens" data-card="latest-news">
+            <!-- ADICIONADO DINAMICAMENTE -->
+          </div>
+          <div class="button btn-black">
+            <button href="#" class="btn black">load more</button>
+          </div>
+        </main>
+        <aside class="hype-box">
+          <div class="hype-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="186"
+              height="55"
+              viewBox="0 0 186 55"
+            >
+              <path
+                d="M21.4 1L1 21.4V717h264.6l20.4-20.4V1H21.4z"
+                mask="url(#mask-2)"
+              ></path>
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="186"
+              height="55"
+              viewBox="0 0 186 55"
+            >
+              <path
+                d="M21.4 1L1 21.4V717h264.6l20.4-20.4V1H21.4z"
+                mask="url(#mask-2)"
+              ></path>
+            </svg>
+
+            <div class="header-box">
+              <h1>THE HYPE BOX</h1>
+              <p>
+                Can’t-miss news and updates from across the Marvel Universe!
+              </p>
+            </div>
+
+            <div class="list-itens-news">
+              <div class="item-news">
+                <img src="./img/news/img1.png" alt="" />
+                <div>
+                  <p class="p-title">Tv shows</p>
+                  <p class="p-subtitle">
+                    The God of Mischief's Time Has Come in Official 'Loki'
+                    Trailer
+                  </p>
+                </div>
+              </div>
+
+              <div class="item-news">
+                <img src="./img/news/img1.png" alt="" />
+                <div>
+                  <p class="p-title">Tv shows</p>
+                  <p class="p-subtitle">
+                    The God of Mischief's Time Has Come in Official 'Loki'
+                    Trailer
+                  </p>
+                </div>
+              </div>
+
+              <div class="item-news">
+                <img src="./img/news/img1.png" alt="" />
+                <div>
+                  <p class="p-title">Tv shows</p>
+                  <p class="p-subtitle">
+                    The God of Mischief's Time Has Come in Official 'Loki'
+                    Trailer
+                  </p>
+                </div>
+              </div>
+
+              <div class="item-news">
+                <img src="./img/news/img1.png" alt="" />
+                <div>
+                  <p class="p-title">Tv shows</p>
+                  <p class="p-subtitle">
+                    The God of Mischief's Time Has Come in Official 'Loki'
+                    Trailer
+                  </p>
+                </div>
+              </div>
+
+              <div class="item-news">
+                <img src="./img/news/img1.png" alt="" />
+                <div>
+                  <p class="p-title">Tv shows</p>
+                  <p class="p-subtitle">
+                    The God of Mischief's Time Has Come in Official 'Loki'
+                    Trailer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
       </section>
     </main>
 
