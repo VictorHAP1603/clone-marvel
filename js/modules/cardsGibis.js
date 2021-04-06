@@ -18,6 +18,7 @@ export class BoxCards {
     if (this.url === "../gibis.json") {
       this.modelCard = `
       <div class="item-box">
+      <div>
         <img src="${card.img}" alt="" />
         <div>
           <p class="title">${card.title}</p>
@@ -26,18 +27,7 @@ export class BoxCards {
           </p>
         </div>
       </div>`;
-    } else if (this.url === "../news.json") {
-      this.modelCard = `
-        <div class="item-box">
-          <img src="${card.img}" />
-          <div>
-            <p class="subtitle">${card.header}</p>
-            <p class="title">${card.new}</p>
-            <p>${card.time}</p>
-          </div>
-        </div>
-      `;
-    }
+    } 
 
     return this.modelCard;
   }
@@ -45,7 +35,6 @@ export class BoxCards {
   loadMore() {
     this.modelCard = "";
     let childrens = this.box.children;
-    console.log(childrens);
   }
 
   init() {

@@ -1,5 +1,6 @@
 import { InitBanner } from "./modules/banner.js";
 import { BoxCards } from "./modules/cardsGibis.js";
+import { LoadMore } from './modules/news.js'
 
 const banner = new InitBanner(
   '[data-dropdown="list"]',
@@ -27,6 +28,9 @@ banner.init();
 const cardGibis = new BoxCards('[data-card="gibi"]', "../gibis.json");
 cardGibis.init();
 
-const newsCard = new BoxCards('[data-card="latest-news"]', "../news.json");
-newsCard.init();
-newsCard.loadMore();
+// const newsCard = new BoxCards('[data-card="latest-news"]', "../news.json");
+// newsCard.init();
+// newsCard.loadMore();
+
+const loadMore = new LoadMore('[data-load="button"]', '.latest-itens')
+loadMore.init();
