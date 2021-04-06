@@ -195,6 +195,7 @@ div.clip > img {
 .info {
   position: initial;
   height: 500px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -216,6 +217,10 @@ div.clip > img {
   .box-section {
     padding-right: 0;
     position: initial;
+  }
+
+  .box-section.pad {
+    padding: 20px 0
   }
 
   div.clip {

@@ -74,6 +74,11 @@
 
 @media (max-width: 852px) {
   .gibis {
+
+    .box-section.pad {
+      padding: 30px 0 !important;
+    }
+
     .clip {
       height: auto;
     }
