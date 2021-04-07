@@ -32,7 +32,6 @@ html {
 
 body {
   font-family: var(--font);
-  padding-bottom: 200px;
 }
 
 .container {
@@ -47,6 +46,10 @@ img {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 // BUTTONS
@@ -120,6 +123,31 @@ button {
     background-color: var(--gray);
     color: var(--text-color-white);
     border: 1px solid var(--text-color-white);
+  }
+}
+
+.btn-video {
+  background-color: #fff;
+  color: var(--red);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.4s;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 40%;
+    height: 40%;
+    display: block;
+    background-color: var(--red);
+    transition: all 0.4s;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(90deg);
+    z-index: 100;
   }
 }
 
@@ -208,6 +236,12 @@ div.clip > img {
     width: 40%;
   }
 
+  .p-title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 10px 0 0 0;
+  }
+
   .btn {
     border: 2px solid var(--text-color-white);
   }
@@ -220,7 +254,7 @@ div.clip > img {
   }
 
   .box-section.pad {
-    padding: 20px 0
+    padding: 20px 0;
   }
 
   div.clip {
@@ -294,7 +328,8 @@ div.clip > img {
   font-weight: bold;
   align-self: flex-start;
   position: relative;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  letter-spacing: 4px;
   margin-bottom: 25px !important;
 
   &::before {
@@ -322,5 +357,46 @@ div.clip > img {
     background-color: #c6a972;
 
     transform: rotate(135deg);
+  }
+}
+
+.scrollbar {
+  &::-webkit-scrollbar {
+    background-color: #0004;
+    height: 5px;
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+    cursor: pointer !important;
+  }
+}
+// MIXINS
+
+@mixin btn-video($tamanho) {
+  width: $tamanho;
+  height: $tamanho;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ANIMATIONS
+
+.animeLeft {
+  animation: animeLeft 0.4s forwards;
+}
+
+@keyframes animeLeft {
+  from {
+    transform: translate3d(-50px, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }

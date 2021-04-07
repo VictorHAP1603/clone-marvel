@@ -27,7 +27,7 @@ export class BoxCards {
           </p>
         </div>
       </div>`;
-    } 
+    }
 
     return this.modelCard;
   }
