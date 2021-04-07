@@ -1854,7 +1854,7 @@ footer .footer-1 .container .text-footer .text-2 p {
 footer .footer-2 {
   width: 100%;
   background-color: var(--text-color-black);
-  padding: 80px 20px;
+  padding: 80px 20px 20px 20px;
 }
 
 footer .footer-2 .container {
@@ -1885,6 +1885,10 @@ footer .footer-2 .container div.box .footer-2-1 {
   display: -ms-flexbox;
   display: flex;
   width: 40%;
+}
+
+footer .footer-2 .container div.box .footer-2-1 svg {
+  display: none;
 }
 
 footer .footer-2 .container div.box .footer-2-1 ul {
@@ -2050,7 +2054,7 @@ footer .direitos {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px 0;
+  padding-bottom: 20px;
   background-color: var(--text-color-black);
   color: var(--text-color-white);
   font-size: 0.8rem;
@@ -2122,6 +2126,61 @@ footer .direitos i {
 @media (max-width: 600px) {
   footer .footer-1 .container .img-footer img {
     height: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  footer .footer-2 .container div.box .footer-2-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer-2 .container div.box .footer-2-1 img {
+    display: none;
+  }
+  footer .footer-2 .container div.box .footer-2-1 svg {
+    display: initial;
+    width: 27px;
+    height: 43px;
+    margin-bottom: 20px;
+  }
+  footer .footer-2 .container div.box .footer-2-1 ul {
+    padding: 0 0px 0 30px;
+  }
+  footer .footer-2 .container div.box .footer-2-1 ul div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50%;
+  }
+  footer .footer-2 .container div.box .footer-2-1 ul li {
+    padding: 10px 0;
+  }
+  footer .footer-2 .container div.box .footer-2-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-2 .container div.box .footer-2-2 > div {
+    width: 100%;
+  }
+  footer .footer-2 .container div.box .footer-2-2 > div + div {
+    margin-top: 30px;
   }
 }
 /*# sourceMappingURL=main.css.map */
