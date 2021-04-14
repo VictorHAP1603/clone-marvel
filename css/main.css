@@ -36,9 +36,9 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   max-width: 1200px;
   position: relative;
+  margin: 0 auto;
 }
 
 img {
@@ -577,7 +577,7 @@ header.desktop .header .menu-dropdown {
           justify-content: center;
 }
 
-header.desktop .header .menu-dropdown nav {
+header.desktop .header .menu-dropdown nav.menu-list {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -590,7 +590,31 @@ header.desktop .header .menu-dropdown nav {
           justify-content: center;
 }
 
-header.desktop .header .menu-dropdown nav a {
+header.desktop .header .menu-dropdown nav.menu-list > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li > a {
   width: auto;
   padding: 0 20px;
   height: 100%;
@@ -609,11 +633,11 @@ header.desktop .header .menu-dropdown nav a {
   position: relative;
 }
 
-header.desktop .header .menu-dropdown nav a:hover::after {
+header.desktop .header .menu-dropdown nav.menu-list li > a:hover::after {
   opacity: 1;
 }
 
-header.desktop .header .menu-dropdown nav a::after {
+header.desktop .header .menu-dropdown nav.menu-list li > a::after {
   content: "";
   display: block;
   position: absolute;
@@ -625,6 +649,262 @@ header.desktop .header .menu-dropdown nav a::after {
   opacity: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li div.menu-drop {
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop {
+  font-family: var(--font);
+  position: absolute;
+  left: 0;
+  top: 92px;
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  z-index: 100000;
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container {
+  padding: 20px 0;
+  width: 80vw;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .menu-itens {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .menu-itens span {
+  margin: 0 15px;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .menu-itens span:hover a {
+  color: var(--red);
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .menu-itens span a {
+  color: var(--text-color-black);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-weight: bold;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--text-color-black);
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  margin: 0 10px;
+  padding-top: 0px !important;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.videos .image {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.videos .image img {
+  width: 100%;
+  height: 150px;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.videos .image .video {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.videos .image .video::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--red);
+  display: block;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.videos .texts .title {
+  color: var(--subtitle-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 10px 0 5px 0;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.videos .texts .subtitle {
+  color: var(--text-color-black);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: initial;
+  width: 100%;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.videos .card:hover .image .video {
+  background-color: white;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes {
+  padding-bottom: 20px;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card {
+  height: 300px;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  bottom: 0;
+  right: -1px;
+  -webkit-clip-path: polygon(100% 5%, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 5%, 0% 100%, 100% 100%);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  z-index: 10;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card .image {
+  width: 100%;
+  overflow: hidden;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card .image img {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  height: 150px;
+  width: 100%;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card .name {
+  background-color: var(--gray);
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+  position: relative;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card .name .bgc-red {
+  background-color: var(--red);
+  height: 5%;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card .name p {
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 10;
+  position: absolute;
+  width: 80%;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card .name p.name-oficial {
+  bottom: 20px;
+  font-size: 0.8rem;
+  color: var(--subtitle-color);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card:hover .image img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card:hover .name .bgc-red {
+  height: 104%;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .cards-lists.heroes .card:hover .name p.name-oficial {
+  color: #fff;
+}
+
+header.desktop .header .menu-dropdown nav.menu-list li:hover div.menu-drop .container .footer-drop {
+  margin: 40px 0 10px 0;
 }
 
 .header-mobile {
@@ -1484,7 +1764,7 @@ header.desktop .header .menu-dropdown nav a::after {
   }
 }
 
-.videos {
+section.videos {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 500px auto;
@@ -1496,7 +1776,7 @@ header.desktop .header .menu-dropdown nav a::after {
   width: 90%;
 }
 
-.videos .img-video-main {
+section.videos .img-video-main {
   background-color: red;
   -ms-grid-column: 1;
   grid-column: 1;
@@ -1517,7 +1797,7 @@ header.desktop .header .menu-dropdown nav a::after {
           box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.5);
 }
 
-.videos .img-video-main img {
+section.videos .img-video-main img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1527,20 +1807,20 @@ header.desktop .header .menu-dropdown nav a::after {
   left: 0;
 }
 
-.videos .img-video-main .btn-video {
+section.videos .img-video-main .btn-video {
   width: 70px;
   height: 70px;
 }
 
-.videos .img-video-main:hover .btn-video {
+section.videos .img-video-main:hover .btn-video {
   background-color: var(--red);
 }
 
-.videos .img-video-main:hover .btn-video::after {
+section.videos .img-video-main:hover .btn-video::after {
   background-color: #fff;
 }
 
-.videos .list-videos {
+section.videos .list-videos {
   -ms-grid-column: 2;
   grid-column: 2;
   -ms-grid-row: 1;
@@ -1549,11 +1829,11 @@ header.desktop .header .menu-dropdown nav a::after {
   padding-right: 10px;
 }
 
-.videos .list-videos::-webkit-scrollbar {
+section.videos .list-videos::-webkit-scrollbar {
   width: 5px;
 }
 
-.videos .list-videos div.list-item {
+section.videos .list-videos div.list-item {
   width: auto;
   height: 100px;
   background-color: green;
@@ -1561,8 +1841,8 @@ header.desktop .header .menu-dropdown nav a::after {
   cursor: pointer;
 }
 
-.videos .list-videos div.list-item img,
-.videos .list-videos div.list-item div.white {
+section.videos .list-videos div.list-item img,
+section.videos .list-videos div.list-item div.white {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1572,14 +1852,14 @@ header.desktop .header .menu-dropdown nav a::after {
   left: 0;
 }
 
-.videos .list-videos div.list-item div.white {
+section.videos .list-videos div.list-item div.white {
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 10;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.videos .list-videos div.list-item .btn-video {
+section.videos .list-videos div.list-item .btn-video {
   width: 30px;
   height: 30px;
   position: absolute !important;
@@ -1588,44 +1868,44 @@ header.desktop .header .menu-dropdown nav a::after {
   bottom: 0;
 }
 
-.videos .list-videos div.list-item.active div.white, .videos .list-videos div.list-item:hover div.white {
+section.videos .list-videos div.list-item.active div.white, section.videos .list-videos div.list-item:hover div.white {
   opacity: 0;
 }
 
-.videos .list-videos div.list-item.active .btn-video, .videos .list-videos div.list-item:hover .btn-video {
+section.videos .list-videos div.list-item.active .btn-video, section.videos .list-videos div.list-item:hover .btn-video {
   background-color: var(--red);
 }
 
-.videos .list-videos div.list-item.active .btn-video::after, .videos .list-videos div.list-item:hover .btn-video::after {
+section.videos .list-videos div.list-item.active .btn-video::after, section.videos .list-videos div.list-item:hover .btn-video::after {
   background-color: #fff;
 }
 
-.videos .list-videos div.list-item + div.list-item {
+section.videos .list-videos div.list-item + div.list-item {
   margin-top: 30px;
 }
 
-.videos .field-text-video {
+section.videos .field-text-video {
   grid-column: 1 / -1;
   -ms-grid-row: 2;
   grid-row: 2;
 }
 
-.videos .field-text-video .text-item {
+section.videos .field-text-video .text-item {
   display: none;
 }
 
-.videos .field-text-video .text-item.active {
+section.videos .field-text-video .text-item.active {
   display: initial;
 }
 
-.videos .field-text-video .text-item.active p:nth-child(1) {
+section.videos .field-text-video .text-item.active p:nth-child(1) {
   font-size: 0.7rem;
   color: var(--subtitle-color);
   font-weight: bold;
   margin-top: 5px;
 }
 
-.videos .field-text-video .text-item.active p:nth-child(2) {
+section.videos .field-text-video .text-item.active p:nth-child(2) {
   font-size: 2rem;
   color: var(--text-color-black);
   font-weight: bold;
@@ -1633,7 +1913,7 @@ header.desktop .header .menu-dropdown nav a::after {
   margin: 10px 0 15px 0;
 }
 
-.videos .field-text-video .text-item.active p:nth-child(1) {
+section.videos .field-text-video .text-item.active p:nth-child(1) {
   font-size: 0.7rem;
   color: var(--subtitle-color);
   font-weight: bold;
