@@ -1920,38 +1920,38 @@ section.videos .field-text-video .text-item.active p:nth-child(1) {
 }
 
 @media (max-width: 852px) {
-  .videos {
+  section.videos {
     -ms-grid-rows: 500px auto auto;
         grid-template-rows: 500px auto auto;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .videos .img-video-main {
+  section.videos .img-video-main {
     grid-column: 1 / -1;
     -ms-grid-row: 1;
     grid-row: 1;
   }
-  .videos .list-videos {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 3;
-    grid-row: 3;
+  section.videos .list-videos {
+    -ms-grid-column: 1 !important;
+    grid-column: 1 !important;
+    -ms-grid-row: 3 !important;
+    grid-row: 3 !important;
     padding-bottom: 50px;
     padding-right: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .videos .list-videos div.list-item {
+  section.videos .list-videos div.list-item {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     width: 200px;
   }
-  .videos .list-videos div.list-item + div.list-item {
+  section.videos .list-videos div.list-item + div.list-item {
     margin-left: 30px;
     margin-top: 0px;
   }
-  .videos .field-text-video {
+  section.videos .field-text-video {
     grid-column: 1 / -1;
     -ms-grid-row: 2;
     grid-row: 2;
@@ -1959,14 +1959,14 @@ section.videos .field-text-video .text-item.active p:nth-child(1) {
 }
 
 @media (max-width: 600px) {
-  .videos {
+  section.videos {
     -ms-grid-rows: 400px auto;
         grid-template-rows: 400px auto;
   }
 }
 
 @media (max-width: 400px) {
-  .videos {
+  section.videos {
     -ms-grid-rows: 350px auto;
         grid-template-rows: 350px auto;
   }

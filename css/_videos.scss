@@ -140,7 +140,7 @@ section.videos {
 }
 
 @media (max-width: 852px) {
-  .videos {
+  section.videos {
     grid-template-rows: 500px auto auto;
     grid-template-columns: 1fr;
 
@@ -150,8 +150,8 @@ section.videos {
     }
 
     .list-videos {
-      grid-column: 1;
-      grid-row: 3;
+      grid-column: 1 !important;
+      grid-row: 3 !important;
 
       padding-bottom: 50px;
       padding-right: 0px;
@@ -177,13 +177,13 @@ section.videos {
 }
 
 @media (max-width: 600px) {
-  .videos {
+  section.videos {
     grid-template-rows: 400px auto;
   }
 }
 
 @media (max-width: 400px) {
-  .videos {
+  section.videos {
     grid-template-rows: 350px auto;
   }
 }
